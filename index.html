@@ -1,3 +1,36 @@
 <p>Hello Hello 你好</p>
 <p>I am Zhu Gaocanyue, This is my personal website. 我是朱高灿月，这是我的个人网站。 </p>
 <p>Still working on it… 网站施工中…</p>
+
+
+<div id="butong_net_right" style="overflow:hidden;width:500px;">
+<table cellpadding="0" cellspacing="0" border="0">
+<tr><td id="butong_net_right1" valign="top" align="center">
+<table cellpadding="2" cellspacing="0" border="0">
+<tr align="center">
+<td><img src="插入需要滚动的图片"></td>
+<td><img src="插入需要滚动的图片"></td>
+<td><img src="插入需要滚动的图片"></td>
+<td><img src="插入需要滚动的图片"></td>
+<td><img src="插入需要滚动的图片"></td>
+</tr>
+</table>
+</td>
+<td id="butong_net_right2" valign="top"></td>
+</tr>
+</table>
+</div>
+<script>
+var speed=30//速度数值越大速度越慢
+butong_net_right2.innerHTML=butong_net_right1.innerHTML
+function Marquee4(){
+if(butong_net_right.scrollLeft<=0)
+butong_net_right.scrollLeft+=butong_net_right2.offsetWidth
+else{
+butong_net_right.scrollLeft--
+}
+}
+var MyMar4=setInterval(Marquee4,speed)
+butong_net_right.οnmοuseοver=function() {clearInterval(MyMar4)}
+butong_net_right.οnmοuseοut=function() {MyMar4=setInterval(Marquee4,speed)}
+</script>
